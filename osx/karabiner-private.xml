@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<root>
+  <devicevendordef>
+    <vendorname>CM_STORM</vendorname>
+    <vendorid>0x2516</vendorid>
+  </devicevendordef>
+
+  <deviceproductdef>
+    <productname>QUICKFIRE_TK</productname>
+    <productid>0x0011</productid>
+  </deviceproductdef>
+  
+  <item>
+    <device_only>DeviceVendor::CM_STORM,DeviceProduct::QUICKFIRE_TK</device_only>
+    <name>Quickfire TK Media Keys</name>
+    <appendix>Swap Left Alt and Left Command</appendix>
+    <appendix>Change F5 to Play</appendix>
+    <appendix>Change F7 to Previous Track</appendix>
+    <appendix>Change F8 to Next Track</appendix>
+    <appendix>Change F9 to Mute</appendix>
+    <appendix>Change F10 to Volume Down</appendix>
+    <appendix>Change F11 to Volume Up</appendix>
+    <identifier>private.quickfire_tk_media</identifier>
+    <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::F5, ConsumerKeyCode::MUSIC_PLAY</autogen>
+    <autogen>__KeyToKey__ KeyCode::F7, ConsumerKeyCode::MUSIC_PREV</autogen>
+    <autogen>__KeyToKey__ KeyCode::F8, ConsumerKeyCode::MUSIC_NEXT</autogen>
+    <autogen>__KeyToKey__ KeyCode::F9, ConsumerKeyCode::VOLUME_MUTE</autogen>
+    <autogen>__KeyToKey__ KeyCode::F10, ConsumerKeyCode::VOLUME_DOWN</autogen>
+    <autogen>__KeyToKey__ KeyCode::F11, ConsumerKeyCode::VOLUME_UP</autogen>
+  </item>
+</root>
