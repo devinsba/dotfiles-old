@@ -1,1 +1,31 @@
 source $HOME/.zshbin/antigen.zsh
+
+# Load various lib files
+antigen use oh-my-zsh
+
+#
+# Antigen Theme
+#
+
+antigen theme candy
+
+#
+# Antigen Bundles
+#
+
+antigen bundle git
+
+antigen bundle tmuxinator
+antigen bundle Tarrasch/zsh-autoenv
+
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# For SSH, starting ssh-agent is annoying
+antigen bundle ssh-agent
+
+antigen bundle osx
+
+antigen bundle devinsba/dotfiles
+antigen bundle ssh://git@bitbucket.org/devinsba/dotfiles-secret
+
+antigen apply
