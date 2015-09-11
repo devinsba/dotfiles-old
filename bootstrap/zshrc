@@ -28,4 +28,8 @@ antigen bundle osx
 antigen bundle devinsba/dotfiles
 antigen bundle ssh://git@bitbucket.org/devinsba/dotfiles-secret
 
+if (($+WORK_REPO)) ; then
+  antigen bundle $WORK_REPO
+fi
+
 antigen apply
