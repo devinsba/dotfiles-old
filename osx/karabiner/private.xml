@@ -45,7 +45,7 @@
     </device_only>
     <name>OSX Left Command Swap</name>
     <appendix>Swap Left Alt and Left Command</appendix>
-    <identifier>private.quickfire_tk_media</identifier>
+    <identifier>private.command_swap</identifier>
     <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
     <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
   </item>
