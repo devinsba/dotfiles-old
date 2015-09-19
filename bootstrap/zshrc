@@ -33,3 +33,5 @@ if (($+WORK_REPO)) ; then
 fi
 
 antigen apply
+
+source $HOME/.zshrc.local
