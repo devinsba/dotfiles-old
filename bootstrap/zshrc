@@ -34,4 +34,5 @@ fi
 
 antigen apply
 
+# For things that are very specific to the current machine. Like docker IP
 source $HOME/.zshrc.local
