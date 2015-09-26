@@ -1,9 +1,9 @@
+source $HOME/.zshbin/antigen.zsh
+
 # For things that are very specific to the current machine. Like docker IP
 if [ -f $HOME/.zshrc.local ]; then
   source $HOME/.zshrc.local
 fi
-
-source $HOME/.zshbin/antigen.zsh
 
 # Load various lib files
 antigen use oh-my-zsh
