@@ -1,6 +1,6 @@
 #/usr/bin/env zsh
 
-sudo chsh -s /bin/zsh
+sudo sh -c "chsh -s /bin/bash"
 
 # Install Antigen
 mkdir -p $HOME/.zshbin
