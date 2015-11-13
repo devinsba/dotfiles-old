@@ -38,3 +38,6 @@ if (($+WORK_REPO)) ; then
 fi
 
 antigen apply
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
