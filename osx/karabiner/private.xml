@@ -20,6 +20,16 @@
     <productid>0x0141</productid>
   </deviceproductdef>
   
+  <devicevendordef>
+    <vendorname>WASD</vendorname>
+    <vendorid>0x04d9</vendorid>
+  </devicevendordef>
+
+  <deviceproductdef>
+    <productname>CODE_BLUE</productname>
+    <productid>0x0169</productid>
+  </deviceproductdef>
+  
   <item>
     <device_only>DeviceVendor::CM_STORM,DeviceProduct::QUICKFIRE_TK</device_only>
     <name>Quickfire TK Media Keys</name>
@@ -41,7 +51,8 @@
   <item>
     <device_only>
       DeviceVendor::CM_STORM,DeviceProduct::QUICKFIRE_TK,
-      DeviceVendor::VORTEX,DeviceProduct::POK3R
+      DeviceVendor::VORTEX,DeviceProduct::POK3R,
+      DeviceVendor::WASD,DeviceProduct::CODE_BLUE
     </device_only>
     <name>OSX Left Command Swap</name>
     <appendix>Swap Left Alt and Left Command</appendix>
