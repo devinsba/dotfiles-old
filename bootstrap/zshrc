@@ -23,10 +23,8 @@ antigen bundle git
 antigen bundle tmuxinator
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# This is broken in linux for some reason
-if [[ `uname` != 'Linux' ]]; then
-  antigen bundle Tarrasch/zsh-autoenv
-fi
+# Broken at the moment https://github.com/Tarrasch/zsh-autoenv/issues/38
+#antigen bundle Tarrasch/zsh-autoenv
 
 # For SSH, starting ssh-agent is annoying
 antigen bundle ssh-agent
