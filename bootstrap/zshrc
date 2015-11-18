@@ -23,8 +23,7 @@ antigen bundle git
 antigen bundle tmuxinator
 antigen bundle zsh-users/zsh-syntax-highlighting
 
-# Broken at the moment https://github.com/Tarrasch/zsh-autoenv/issues/38
-#antigen bundle Tarrasch/zsh-autoenv
+antigen bundle Tarrasch/zsh-autoenv
 
 # For SSH, starting ssh-agent is annoying
 antigen bundle ssh-agent
