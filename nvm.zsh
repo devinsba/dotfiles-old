@@ -8,7 +8,7 @@ else
     cd $HOME/.nvm
     git checkout master &> /dev/null
     git pull &> /dev/null
-    git checkout `git describe --abbrev=0 --tags` | tail -n1
+    git checkout `git describe --abbrev=0 --tags` 2>&1 | tail -n1
   )
 fi
 
