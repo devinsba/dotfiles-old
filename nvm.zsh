@@ -4,9 +4,10 @@ if [[ ! -d "$HOME/.nvm" ]] ; then
   )
 else
   (
+    echo "Updating nvm.."
     cd $HOME/.nvm
-    git checkout master
-    git pull
+    git checkout master &> /dev/null
+    git pull &> /dev/null
     git checkout `git describe --abbrev=0 --tags`
   )
 fi
