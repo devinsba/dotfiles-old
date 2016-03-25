@@ -5,6 +5,8 @@ if [[ ! -d "$HOME/.nvm" ]] ; then
 else
   (
     cd $HOME/.nvm
+    git checkout master
+    git pull
     git checkout `git describe --abbrev=0 --tags`
   )
 fi
