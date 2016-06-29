@@ -38,3 +38,8 @@ if (($+WORK_REPO)) ; then
 fi
 
 antigen apply
+
+funcs=`compgen -A function | grep __after`
+for func in $funcs; do
+  $func
+done
