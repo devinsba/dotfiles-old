@@ -1,3 +1,4 @@
+autoload bashcompinit
 source $HOME/.zshbin/antigen.zsh
 
 # For things that are very specific to the current machine. Like docker IP
@@ -39,7 +40,7 @@ fi
 
 antigen apply
 
-funcs=`compgen -A function | grep __after`
+funcs=`bashcompinit -A function | grep __after`
 for func in $funcs; do
   $func
 done
