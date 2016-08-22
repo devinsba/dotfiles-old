@@ -45,7 +45,6 @@ compinit
 autoload -Uz bashcompinit
 bashcompinit
 
-funcs=`compgen -A function  | grep __after | uniq`
-for func in $funcs; do
+compgen -A function  | grep __after | uniq | while read func ; do
   $func
 done
