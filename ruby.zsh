@@ -1,4 +1,1 @@
-if [ -f ~/.rvm/scripts/rvm ] ; then
-  source ~/.rvm/scripts/rvm
-  rvm use default
-fi
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" && export PATH="$PATH:$HOME/.rvm/bin"
