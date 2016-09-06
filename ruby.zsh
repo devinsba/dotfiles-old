@@ -5,3 +5,5 @@ RUBY_VERSION=2.3.1
 
 [[ ! -f "$rvm_path/rubies/ruby-$RUBY_VERSION/bin/ruby" ]] && rvm install $RUBY_VERSION
 rvm use --default $RUBY_VERSION
+
+[[ ! `find $rvm_path/gems/ruby-$RUBY_VERSION/gems/bundler* -type d -quit &> /dev/null` ]] && gem install bundler && rvm wrapper ruby-$RUBY_VERSION exec bundle
