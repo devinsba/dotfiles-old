@@ -1,7 +1,7 @@
 [[ ! -s "$HOME/.rvm/scripts/rvm" ]] && curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles && echo 'rvm_silence_path_mismatch_check_flag=1' >> ~/.rvmrc
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
-MY_RUBY_VERSION=2.3.1
+export MY_RUBY_VERSION=2.3.1
 
 [[ ! -f "$rvm_path/rubies/ruby-$MY_RUBY_VERSION/bin/ruby" ]] && rvm install ruby-$RUBY_VERSION
 rvm use --default ruby-$MY_RUBY_VERSION
