@@ -16,7 +16,7 @@ if $(command) ; then
 else
     gem install bundler
 fi
-[[ ! -f "$rvm_path/bin/exec_bundle" ]] && rvm wrapper ruby-$MY_RUBY_VERSION exec bundle
+[[ ! -f "$rvm_path/bin/exec_bundler" ]] && rvm wrapper ruby-$MY_RUBY_VERSION exec bundler
 
 function __after_rvm() {
   export PATH="$PATH:$HOME/.rvm/bin"
