@@ -11,7 +11,7 @@ if [[ $(uname) == "Darwin" ]] ; then
   command='find $rvm_path/gems/ruby-$MY_RUBY_VERSION/gems/bundler* -depth 0 -type d &> /dev/null'
 fi
 
-if $(command) ; then
+if zsh -c "$command" ; then
     echo "gem: bundler already installed"
 else
     gem install bundler
