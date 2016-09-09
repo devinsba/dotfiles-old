@@ -20,5 +20,4 @@ fi
 
 function __after_rvm() {
   export PATH="$PATH:$HOME/.rvm/bin"
-  rvm use --default ruby-$MY_RUBY_VERSION
 }
