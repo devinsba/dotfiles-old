@@ -8,5 +8,5 @@ export GOPATH=~/go
 export PATH=$GOPATH/bin:$PATH
 
 function __after_gimme() {
-  eval "$(gimme 1.7.1)"
+  eval "$(gimme 1.7.3)"
 }
