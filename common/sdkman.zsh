@@ -16,6 +16,7 @@ function __devinsba_postinit_sdkman() {
 function __devinsba_cleaner_sdkman() {
     rm -rf $HOME/.sdkman
     rm -rf $HOME/.grails
+    rm -rf $HOME/.grails_history
     rm -rf $HOME/.groovy
 }
 
