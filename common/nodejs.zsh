@@ -19,6 +19,7 @@ function __devinsba_update_nvm() {
 }
 function __devinsba_install_nodejs() {
     (
+        source $ZSH_LIB_DIR/nvm/nvm.sh
         nvm install --default $NODEVERSION
     )
     echo "Run this to use your node version in this shell: nvm use --default $NODEVERSION"
