@@ -21,7 +21,7 @@ function __devinsba_install_ruby() {
     echo "Run this to use your ruby version: rvn use $RUBYVERSION"
 }
 function __devinsba_postinit_ruby() {
-    if [ -d $ZSH_LIB_DIR/nvm/versions/node/$NODEVERSION ] ; then
+    if [ -d $HOME/.rvm/rubies/$RUBYVERSION ] ; then
         rvm use --default $RUBYVERSION
     else
         echo "Ruby $RUBYVERSION is not installed\n  rvm install it to get it configured for your shell"
