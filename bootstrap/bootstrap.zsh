@@ -21,3 +21,4 @@ if [[ -f $HOME/.zshrc ]]; then
     fi
 fi
 ln -s $HOME/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-devinsba-SLASH-dotfiles.git/bootstrap/zshrc $HOME/.zshrc
+execute_installers
