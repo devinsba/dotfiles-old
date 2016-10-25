@@ -11,6 +11,10 @@ curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.z
 ln -s $HOME/.zshtools/lib/antigen/antigen.zsh $HOME/.zshtools/bin/antigen.zsh
 source $HOME/.zshtools/bin/antigen.zsh
 
+# Install console fonts
+git clone git@github.com:powerline/fonts.git $HOME/.zshtools/lib/fonts
+$HOME/.zshtools/lib/fonts/install.sh
+
 # Install zshrc file
 antigen bundle devinsba/dotfiles
 if [[ -f $HOME/.zshrc ]]; then
