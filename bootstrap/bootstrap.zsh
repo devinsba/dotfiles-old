@@ -22,3 +22,5 @@ if [[ -f $HOME/.zshrc ]]; then
 fi
 ln -s $HOME/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-devinsba-SLASH-dotfiles.git/bootstrap/zshrc $HOME/.zshrc
 execute_installers
+
+echo "Open a new shell for all your antigen powered goodness"
