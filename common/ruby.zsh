@@ -16,7 +16,7 @@ function __devinsba_update_rvm() {
 function __devinsba_install_ruby() {
     (
         source $HOME/.rvm/scripts/rvm
-        rvm install --default $RUBY_VERSION
+        rvm install --default $RUBYVERSION
     )
     echo "Run this to use your ruby version: rvn use $RUBYVERSION"
 }
