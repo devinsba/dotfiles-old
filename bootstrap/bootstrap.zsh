@@ -24,5 +24,6 @@ ln -s $HOME/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-devinsba-S
 
 echo "Executing installers for you"
 execute_installers
+source $HOME/.zshrc
 
 echo "Open a new shell for all your antigen powered goodness"
