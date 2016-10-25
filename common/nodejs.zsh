@@ -21,6 +21,7 @@ function __devinsba_install_nodejs() {
     (
         source $ZSH_LIB_DIR/nvm/nvm.sh
         nvm install $NODEVERSION
+        nvm alias default $NODEVERSION
     )
     echo "Run this to use your node version in this shell: nvm use $NODEVERSION"
 }
@@ -38,7 +39,7 @@ function __devinsba_cleaner_nvm_nodejs() {
 }
 
 # Use the full version string
-NODEVERSION=v6.9.1
+NODEVERSION=v7.0.0
 
 if [[ ! -d "$ZSH_LIB_DIR/nvm" ]] ; then
     register_installer __devinsba_install_nvm
