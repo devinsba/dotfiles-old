@@ -6,7 +6,7 @@ sudo chsh -s /bin/zsh
 # Install Antigen
 mkdir -p $HOME/.zshtools/lib
 mkdir -p $HOME/.zshtools/bin
-curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $HOME/.zshtools/lib/antigen/antigen.zsh
+curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh > $HOME/.zshtools/lib/antigen/antigen.zsh
 ln -s $HOME/.zshtools/lib/antigen/antigen.zsh $HOME/.zshtools/bin/antigen.zsh
 source $HOME/.zshtools/bin/antigen.zsh
 
