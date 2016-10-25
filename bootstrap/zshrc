@@ -1,3 +1,4 @@
+rm -rf $HOME/.zcompdump*
 source $HOME/.zshtools/bin/antigen.zsh
 
 # For things that are very specific to the current machine. Like docker IP
