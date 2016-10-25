@@ -11,7 +11,9 @@ antigen use oh-my-zsh
 #
 # Antigen Theme
 #
-antigen theme agnoster
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon go_version node_version nvm dir vcs)
+antigen theme https://github.com/bhilburn/powerlevel9k powerlevel9k
 
 #
 # Antigen Bundles
