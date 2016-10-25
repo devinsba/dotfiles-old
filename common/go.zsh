@@ -28,7 +28,7 @@ function __devinsba_cleaner_gimme() {
     rm -rf $HOME/.gimme
 }
 
-export GOVERSION=1.7.3
+GOVERSION=1.7.3
 export GOPATH=~/go
 export PATH=$GOPATH/bin:$PATH
 
