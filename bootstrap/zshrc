@@ -1,4 +1,4 @@
-source $HOME/.zshbin/antigen.zsh
+source $HOME/.zshtools/bin/antigen.zsh
 
 # For things that are very specific to the current machine. Like docker IP
 if [ -f $HOME/.zshrc.local ]; then
