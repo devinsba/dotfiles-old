@@ -12,7 +12,7 @@ antigen use oh-my-zsh
 #
 # Antigen Theme
 #
-antigen theme https://github.com/caiogondim/bullet-train-oh-my-zsh-theme bullet-train
+antigen theme agnoster
 
 #
 # Antigen Bundles
