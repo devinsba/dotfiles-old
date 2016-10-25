@@ -3,7 +3,6 @@ function __devinsba_install_rvm() {
     (
         curl -sSL https://get.rvm.io | bash -s -- --ignore-dotfiles
         echo 'rvm_silence_path_mismatch_check_flag=1' >> $HOME/.rvmrc
-        cat $HOME/.rvmrc | uniq > $HOME/.rvmrc
     )
     echo "Run this to use nvm in this shell: source $HOME/.rvm/scripts/rvm"
 }
