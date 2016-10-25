@@ -17,6 +17,12 @@ function __devinsba_update_nvm() {
     )
     echo "Run this to use the new version in this shell: source $ZSH_LIB_DIR/nvm/nvm.sh"
 }
+function __devinsba_install_nodejs() {
+    (
+        nvm install --default $NODEVERSION
+    )
+    echo "Run this to use your node version in this shell: nvm use --default $NODEVERSION"
+}
 function __devinsba_postinit_nodejs() {
     if [ -d $ZSH_LIB_DIR/nvm/versions/node/$NODEVERSION ] ; then
         nvm use $NODEVERSION
@@ -30,11 +36,16 @@ function __devinsba_cleaner_nvm_nodejs() {
     rm -rf $HOME/.nvm
 }
 
+# Use the full version string
 NODEVERSION=v6.9.1
 
 if [[ ! -d "$ZSH_LIB_DIR/nvm" ]] ; then
     register_installer __devinsba_install_nvm
-else
+fi
+if [[ ! -d "$ZSH_LIB_DIR/nvm/versions/node/$NODEVERSION" ]] ; then
+    register_installer __devinsba_install_nodejs
+fi
+if [[ -d "$ZSH_LIB_DIR/nvm" ]] ; then
     source $ZSH_LIB_DIR/nvm/nvm.sh
 fi
 
