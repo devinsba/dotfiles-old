@@ -8,7 +8,6 @@ function __devinsba_install_gimme() {
         gimme $GOVERSION &>/dev/null
     )
 }
-
 function __devinsba_update_gimme() {
     (
         cd $ZSH_LIB_DIR/gimme
@@ -17,7 +16,6 @@ function __devinsba_update_gimme() {
     gimme $GOVERSION
     echo "Run this to change versions in the current shell: "'eval "$(gimme $GOVERSION)"'
 }
-
 function __devinsba_postinit_gimme() {
     if [ $(ls $HOME/.gimme/envs/ | grep $GOVERSION | wc -l) -gt "0" ] ; then
         eval "$(gimme $GOVERSION)"
@@ -25,6 +23,9 @@ function __devinsba_postinit_gimme() {
         echo "Run execute_updaters to get selected go version"
         source $HOME/.gimme/envs/latest.env
     fi
+}
+function __devinsba_cleaner_gimme() {
+    rm -rf $HOME/.gimme
 }
 
 export GOVERSION=1.7.3
@@ -38,3 +39,4 @@ else
 fi
 
 register_updater __devinsba_update_gimme
+register_cleaner __devinsba_cleaner_gimme

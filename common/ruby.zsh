@@ -27,6 +27,9 @@ function __devinsba_postinit_ruby() {
         echo "Ruby $RUBYVERSION is not installed\n  rvm install it to get it configured for your shell"
     fi
 }
+function __devinsba_cleaner_rvm_ruby() {
+    rm -rf $HOME/.rvm
+}
 
 # Use the full version here
 RUBYVERSION=ruby-2.3.1
@@ -43,6 +46,7 @@ fi
 
 register_updater __devinsba_update_rvm
 register_postinit __devinsba_postinit_ruby
+register_cleaner __devinsba_cleaner_rvm_ruby
 
 #command='find $rvm_path/gems/ruby-$MY_RUBY_VERSION/gems/bundler* -maxdepth 0 -type d &> /dev/null'
 #if [[ $(uname) == "Darwin" ]] ; then

@@ -4,9 +4,11 @@ sudo -v
 sudo chsh -s /bin/zsh
 
 # Install Antigen
-mkdir -p $HOME/.zshbin
-curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $HOME/.zshbin/antigen.zsh
-source $HOME/.zshbin/antigen.zsh
+mkdir -p $HOME/.zshtools/lib
+mkdir -p $HOME/.zshtools/bin
+curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > $HOME/.zshtools/lib/antigen/antigen.zsh
+ln -l $HOME/.zshtools/lib/antigen/antigen.zsh $HOME/.zshtools/bin/antigen.zsh
+source $HOME/.zshtools/bin/antigen.zsh
 
 # Install zshrc file
 antigen bundle devinsba/dotfiles

@@ -8,7 +8,6 @@ function __devinsba_install_nvm() {
     )
     echo "Run this to use nvm in this shell: source $ZSH_LIB_DIR/nvm/nvm.sh"
 }
-
 function __devinsba_update_nvm() {
     (
         cd $ZSH_LIB_DIR/nvm
@@ -18,6 +17,20 @@ function __devinsba_update_nvm() {
     )
     echo "Run this to use the new version in this shell: source $ZSH_LIB_DIR/nvm/nvm.sh"
 }
+function __devinsba_postinit_nodejs() {
+    if [ -d $ZSH_LIB_DIR/nvm/versions/node/$NODEVERSION ] ; then
+        nvm use $NODEVERSION
+    else
+        echo "Nodejs $NODEVERSION is not installed\n  nvm install it to get it configured for your shell"
+    fi
+}
+function __devinsba_cleaner_nvm_nodejs() {
+    rm -rf $HOME/.npm
+    rm -rf $HOME/.node-gyp
+    rm -rf $HOME/.nvm
+}
+
+NODEVERSION=v6.9.1
 
 if [[ ! -d "$ZSH_LIB_DIR/nvm" ]] ; then
     register_installer __devinsba_install_nvm
@@ -26,13 +39,5 @@ else
 fi
 
 register_updater __devinsba_update_nvm
-
-NODEVERSION=v6.9.1
-function __devinsba_postinit_nodejs() {
-    if [ -d $ZSH_LIB_DIR/nvm/versions/node/$NODEVERSION ] ; then
-        nvm use $NODEVERSION
-    else
-        echo "Nodejs $NODEVERSION is not installed\n  nvm install it to get it configured for your shell"
-    fi
-}
 register_postinit __devinsba_postinit_nodejs
+register_cleaner __devinsba_cleaner_nvm_nodejs
