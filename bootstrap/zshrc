@@ -39,12 +39,4 @@ fi
 
 antigen apply
 
-zstyle :compinstall filename '/Users/devinsba/.zshrc'
-autoload -Uz compinit
-compinit
-autoload -Uz bashcompinit
-bashcompinit
-
-compgen -A function  | grep __after | uniq | while read func ; do
-  $func
-done
+execute_postinits

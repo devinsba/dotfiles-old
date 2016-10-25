@@ -1,4 +1,5 @@
-#/usr/bin/env zsh
+#!/usr/bin/env bash
+
 sudo -v
 sudo chsh -s /bin/zsh
 
@@ -10,8 +11,8 @@ source $HOME/.zshbin/antigen.zsh
 # Install zshrc file
 antigen bundle devinsba/dotfiles
 if [[ -f $HOME/.zshrc ]]; then
-  if [[ ! -h $HOME/.zshrc ]]; then
-    mv $HOME/.zshrc $HOME/.zshrc.old
-  fi
+    if [[ ! -L $HOME/.zshrc ]]; then
+        mv $HOME/.zshrc $HOME/.zshrc.old
+    fi
 fi
 ln -s $HOME/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-devinsba-SLASH-dotfiles.git/bootstrap/zshrc $HOME/.zshrc
