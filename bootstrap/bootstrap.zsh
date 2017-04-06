@@ -35,3 +35,4 @@ execute_installers
 source $HOME/.zshrc
 
 echo "Open a new shell for all your antigen powered goodness"
+rm -r ~/.zcompdump
