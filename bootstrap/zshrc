@@ -12,7 +12,8 @@ antigen use oh-my-zsh
 # Antigen Theme
 #
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon go_version node_version nvm dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon aws anaconda node_version go_version dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time public_ip)
 antigen theme https://github.com/bhilburn/powerlevel9k powerlevel9k
 
 #
