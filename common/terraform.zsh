@@ -8,6 +8,7 @@ function __devinsba_install_tfenv() {
 }
 function __devinsba_install_terraform() {
   tfenv install $TERRAFORM_VERSION
+  tfenv use $TERRAFORM_VERSION
 }
 function __devinsba_postinit_terraform() {
   tfenv use $TERRAFORM_VERSION
