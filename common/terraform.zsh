@@ -1,0 +1,3 @@
+export TERRAFORM_VERSION=0.8
+
+tfenv use $TERRAFORM_VERSION
