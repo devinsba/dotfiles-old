@@ -7,9 +7,10 @@ function __devinsba_install_tfenv() {
   )
 }
 function __devinsba_install_terraform() {
-  (
-    tfenv install $TERRAFORM_VERSION
-  )
+  tfenv install $TERRAFORM_VERSION
+}
+function __devinsba_postinit_terraform() {
+  tfenv use $TERRAFORM_VERSION
 }
 
 export TERRAFORM_VERSION=0.8.8
@@ -19,4 +20,6 @@ if [[ ! -d "$ZSH_LIB_DIR/tfenv" ]] ; then
 fi
 if [[ ! -d "$ZSH_LIB_DIR/tfenv/versions/$TERRAFORM_VERSION" ]] ; then
   register_installer __devinsba_install_terraform
+else
+  register_postinit __devinsba_postinit_terraform
 fi
