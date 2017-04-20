@@ -14,6 +14,13 @@ function __devinsba_postinit_terraform() {
   tfenv use $TERRAFORM_VERSION
 }
 
+function __devinsba_update_tfenv() {
+  (
+    cd $ZSH_LIB_DIR/tfenv
+    git pull
+  )
+}
+
 export TERRAFORM_VERSION=0.8.8
 
 if [[ ! -d "$ZSH_LIB_DIR/tfenv" ]] ; then
