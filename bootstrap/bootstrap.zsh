@@ -24,9 +24,9 @@ if [[ -f $HOME/.zshrc ]]; then
         mv $HOME/.zshrc $HOME/.zshrc.sym
     fi
 fi
-ln -s $HOME/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-devinsba-SLASH-dotfiles.git/bootstrap/zshrc $HOME/.zshrc
+ln -s $HOME/.antigen/bundles/devinsba/dotfiles/bootstrap/zshrc $HOME/.zshrc
 (
-    cd $HOME/.antigen/repos/https-COLON--SLASH--SLASH-github.com-SLASH-devinsba-SLASH-dotfiles.git/
+    cd $HOME/.antigen/bundles/devinsba/dotfiles/
     git remote set-url origin git@github.com:devinsba/dotfiles.git
 )
 
