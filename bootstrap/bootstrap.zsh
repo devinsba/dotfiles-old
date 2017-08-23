@@ -29,8 +29,6 @@ ln -s $HOME/.antigen/bundles/devinsba/dotfiles/bootstrap/zshrc $HOME/.zshrc
     git remote set-url origin git@github.com:devinsba/dotfiles.git
 )
 
-echo "Executing installers for you"
-execute_installers
 source $HOME/.zshrc
 
 echo "Open a new shell for all your antigen powered goodness"
