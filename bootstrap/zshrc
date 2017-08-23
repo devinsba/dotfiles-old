@@ -11,11 +11,6 @@ fi
 antigen use oh-my-zsh
 
 #
-# Antigen Theme
-#
-antigen theme devinsba/zsh-theme
-
-#
 # Antigen Bundles
 #
 antigen bundle git
@@ -35,6 +30,11 @@ antigen bundle ssh://git@bitbucket.org/devinsba/dotfiles-secret
 if (($+WORK_REPO)) ; then
   antigen bundle $WORK_REPO
 fi
+
+#
+# Antigen Theme
+#
+antigen theme devinsba/zsh-theme
 
 antigen apply
 
