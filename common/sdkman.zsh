@@ -2,7 +2,7 @@
 function __devinsba_install_sdkman() {
     (
         cd $HOME
-        curl -s http://get.sdkman.io | sed -e '/Attempt update of bash profiles.../,$d' | bash
+        curl -s http://get.sdkman.io | sed -e '/if.*sdkman_bashrc/,$d' | bash
     )
 }
 function __devinsba_update_sdkman() {
