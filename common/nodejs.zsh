@@ -39,7 +39,7 @@ function __devinsba_cleaner_nvm_nodejs() {
 }
 
 # Use the full version string
-NODEVERSION=v7.8.0
+NODEVERSION=v8.4.0
 
 if [[ ! -d "$ZSH_LIB_DIR/nvm" ]] ; then
     register_installer __devinsba_install_nvm
