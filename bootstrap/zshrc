@@ -37,5 +37,3 @@ fi
 antigen theme devinsba/zsh-theme
 
 antigen apply
-
-execute_postinits
