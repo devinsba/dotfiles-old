@@ -1,15 +1,14 @@
 #!/usr/bin/env bash
 
 sudo -v
-sudo chsh -s /bin/zsh
+sudo chsh -s /bin/zsh $USER
 
 # Install Antigen
 mkdir -p $HOME/.antigen
 mkdir -p $HOME/.zshtools/lib/antigen
 mkdir -p $HOME/.zshtools/bin
-curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh > $HOME/.zshtools/lib/antigen/antigen.zsh
-ln -s $HOME/.zshtools/lib/antigen/antigen.zsh $HOME/.zshtools/bin/antigen.zsh
-source $HOME/.zshtools/bin/antigen.zsh
+git clone https://github.com/zsh-users/antigen.git $HOME/.zshtools/lib/antigen
+source $HOME/.zshtools/lib/antigen/antigen.zsh
 
 # Install console fonts
 git clone git@github.com:powerline/fonts.git $HOME/.zshtools/lib/fonts
