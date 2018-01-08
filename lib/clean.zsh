@@ -1,3 +1,5 @@
+#@IgnoreInspection BashAddShebang
+
 function zsh_self_destruct() {
     rm -rf $HOME/.antigen
     rm -rf $HOME/.zcompdump*

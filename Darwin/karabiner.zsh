@@ -1,4 +1,5 @@
 #@IgnoreInspection BashAddShebang
+
 HERE=${0:a:h}
 
 if [[ -d "/Applications/Karabiner.app" ]] ; then

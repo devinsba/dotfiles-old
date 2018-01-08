@@ -1,4 +1,5 @@
 #@IgnoreInspection BashAddShebang
+
 HERE=${0:a:h}
 
 export REPO_HOME=$HERE
