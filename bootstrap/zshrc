@@ -40,8 +40,8 @@ fi
 # antigen theme devinsba/zsh-theme
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time public_ip)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon aws anaconda node_version go_version dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time)
 antigen theme https://github.com/bhilburn/powerlevel9k powerlevel9k
 
 antigen apply
