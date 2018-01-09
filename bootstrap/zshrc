@@ -23,6 +23,7 @@ antigen bundle zsh-users/zsh-history-substring-search
 
 antigen bundle devinsba/dotfiles
 antigen bundle devinsba/dotfiles-docker
+antigen bundle devinsba/dotfiles-completion
 local os_antigen="$ANTIGEN_BUNDLES/devinsba/dotfiles/antigen.`uname`.zsh"
 [ -f $os_antigen ] && source $os_antigen
 
@@ -39,7 +40,7 @@ fi
 # antigen theme devinsba/zsh-theme
 POWERLEVEL9K_INSTALLATION_PATH=$ANTIGEN_BUNDLES/bhilburn/powerlevel9k
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon aws anaconda node_version go_version dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status history time public_ip)
 antigen theme https://github.com/bhilburn/powerlevel9k powerlevel9k
 
